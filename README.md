@@ -9,24 +9,18 @@ PaddleOCR
 
 ## Dataset：
 
-Weblogo_500:
+[Weblogo_500](https://pan.baidu.com/s/1TCGQfi0bjNBvIKyf9U_ynA?pwd=logo )
 
-链接：https://pan.baidu.com/s/1TCGQfi0bjNBvIKyf9U_ynA?pwd=logo 
-
-提取码：logo 
-
-Weblogo_1000:
-
-链接：https://pan.baidu.com/s/101mTA7f6bpUvjI4uftTXnA?pwd=logo 
+[Weblogo_1000](https://pan.baidu.com/s/101mTA7f6bpUvjI4uftTXnA?pwd=logo )
 
 提取码：logo 
 
 
 ## Usage：
 
-1.Download the weight file from paddlepaddle. Modify the weight path and dataset path in configs. 
+*1.Download the weight file from paddlepaddle. Modify the weight path and dataset path in configs. 
 
-2.train: 'python -u tools/train.py -c ./configs/logomask/logomask.yml -o weights=your path --eval'
+*2.train: `python -u tools/train.py -c ./configs/logomask/logomask.yml -o weights=your path --eval`
 
-3.eval: 'python -u tools/eval.py -c -c ./configs/logomask/logomask.yml -o weights=your path  --classwise'
+*3.eval: `python -u tools/eval.py -c -c ./configs/logomask/logomask.yml -o weights=your path  --classwise`
 
