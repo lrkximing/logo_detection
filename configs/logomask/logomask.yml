@@ -1,0 +1,27 @@
+_BASE_: [
+  '../datasets/voc_logo.yml',
+  '../runtime.yml',
+  '_base_/optimizer.yml',
+  '_base_/network.yml',
+  '_base_/reader.yml',
+]
+
+snapshot_epoch: 5
+pretrain_weights:  /MobileNetV3_large_x1_0_ssld_pretrained.pdparams
+weights: output/yolov3_text_mask/model_final
+
+
+EvalReader:
+  collate_batch: false
+
+LearningRate:
+  base_lr: 0.0001
+  schedulers:
+  - !PiecewiseDecay
+    gamma: 0.1
+    milestones:
+    - 216
+    - 243
+  - !LinearWarmup
+    start_factor: 0.
+    steps: 1000
